@@ -1,0 +1,329 @@
+@import url('https://fonts.googleapis.com/css2?family=Handlee&family=Montserrat:wght@100&display=swap');
+
+:root{
+  --heading-font: 'Montserrat', sans-serif;
+  --normal-font: 'Handlee', cursive, sans-serif;
+  --primary-color: rgba(120, 120,120, 1);
+  --secondary-color: darkolivegreen;
+  --hover-secondary-color: #319733;
+  --background-color: rgba(162, 182,168, 1);
+  --hover-background-color: #88978d;
+}
+
+/* defaults */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+
+  font-family: var(--normal-font);
+  color: var(--primary-color);
+  font-size: 3vh;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1 {
+  font-size: 5vh;
+}
+
+h1, h2, h3 {
+  font-family: var(--heading-font);
+}
+
+img {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+main {
+  width: 80%; 
+  position: absolute; 
+  top: 0; 
+  right: 0; 
+}
+
+/* header */
+.header-content {
+  display: none;
+}
+
+.open {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 8vh;
+  background-color: white;
+  width: 100%;
+  padding: 2vh 0 2vh 1vh;
+  z-index: 1;
+  border-top: 1px solid var(--primary-color);
+  border-bottom: 1px solid var(--primary-color);
+}
+
+.hamburger {
+  background-color: var(--background-color);
+  position: fixed;
+}
+
+.hamburger:hover {
+  background-color: var(--hover-background-color);
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+nav li {
+  padding-left: 1vh;
+  padding-top: 2vh;
+}
+
+nav a {
+  padding: 0.5vh;
+}
+
+nav a:hover, .back:hover {
+  color: white;
+  background-color: var(--background-color);
+}
+
+/* home page */
+#random-content {
+  overflow: hidden;
+}
+
+#rotating-image {
+  width: 100%; 
+  height: 100vh; 
+  object-fit: cover;
+  animation: zoomInOut 10s infinite;
+}
+
+/* map page */
+#map {
+  width: 100%; 
+  height: 100vh;
+}
+
+/* gallery page */
+.gallery-item img {
+  width: 100%;
+  height: auto;
+}
+
+/* content details page */
+.content-item {
+  width: 70%; 
+  position: absolute; 
+  top: 0; 
+  left: 0;
+}
+
+.content-item img {
+  width: 100%; 
+  height: 100vh; 
+  object-fit: cover; 
+}
+
+.content-details {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  right: 0;
+  width: 30%;
+  padding-left: 1vh;
+  padding-top: 1vh;
+}
+
+.content-details * {
+  overflow-wrap: break-word;
+  padding-right: 1vh;
+}
+
+.content-location {
+  font-size: 5vh;
+}
+
+.content-source {
+  margin-top: 2vh;
+  font-size: 2vh;
+}
+
+.content-description {
+  margin-top: 10vh;
+  font-size: 4vh;
+}
+
+.back {
+  position: fixed;
+  bottom: 1vh;
+  right: 1vh;
+  transition: color 0.75s;
+}
+
+.back:hover {
+  color: black;
+  background-color: transparent;
+}
+
+/* forms */
+form {
+  border: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+label {
+  width: 80%;
+}
+
+.textInput {
+  display: block;
+  background-color: white;
+  border: none;
+  outline: none;
+  border-radius: 2px;
+  padding: 5px;
+  margin: 5px;
+  margin-bottom: 10px;
+  width: 100%;
+  font: inherit;
+  color: black;
+  box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.5);
+}
+
+.form {
+  background-color: var(--background-color);
+  color: black;
+  min-height: 100%;
+  height: auto;
+  font-size: 4vh;
+}
+
+.form h2 {
+  padding-left: 5vh;
+}
+
+.required-field {
+  color: red;
+}
+
+#my_image {
+  display: block;
+  font: inherit;
+  width: 100%;
+  padding: 5px;
+  margin: 5px;
+  margin-bottom: 10px;
+}
+
+button {
+  background-color: var(--secondary-color);
+  font: inherit;
+  color: white;
+  border: none;
+  border-radius: 2px;
+  padding: 5px 10px;
+  margin: 5px;
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 1);
+  transition: background-color 1s;
+  z-index: 1;
+}
+
+button:hover {
+  background-color: var(--hover-secondary-color);
+  cursor: pointer;
+}
+
+/* documentation page */
+.documentation {
+  height: auto;
+  min-height: 100%;
+  font-size: 4vh;
+  padding-left: 3vh;
+  border-left: 1px solid black;
+  box-sizing: border-box;
+}
+
+.documentation * {
+  width: 100%;
+  height: auto;
+  overflow-wrap: break-word;
+}
+
+.documentation-img {
+  width: auto;
+  max-width: 100%;
+  height: auto;
+}
+
+.documentation a {
+  color: black;
+  text-decoration: underline;
+}
+
+@media (min-width: 1366px) {
+  body {
+    font-size: 5vh;
+  }
+
+  h1 {
+    font-size: 10vh;
+  }
+
+  .hamburger {
+    display: none;
+  }
+
+  nav li {
+    padding: 0;
+  }
+
+  nav a {
+    padding: 0;
+    transition: color 0.75s;
+  }
+
+  nav a:hover {
+    color: black;
+    background-color: transparent;
+  }
+
+  .header-content {
+    margin-top: 5vh;
+    margin-left: 5%;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    width: auto;
+    border: none;
+  }
+
+  main {
+    width: 70%;
+  }
+  
+  .content-description {
+    font-size: 4vh;
+  }
+}
+
+@keyframes zoomInOut {
+  0%, 100%
+  {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+}
